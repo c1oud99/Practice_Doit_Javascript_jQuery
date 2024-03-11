@@ -3,14 +3,28 @@
 <head>
 	<meta charset="UTF-8">
 	<title> 논리연산자 </title>
-<script>
-	var a = 10, 
-					b= 20, 
-					c = 0, 
-					d = "hello";
-	var result;
+	<script>
+		var a = 10;
+		var b=20;
+		var m=30;
+		var n=40;
+		
+		var result;
+		result = a > b || b >= m || m > n;		// F || F || F
+		document.write(result, "<br>");			// F
 
-</script>
+		result = a > b || b >= m || m <= n;		// F || F || T
+		document.write(result, "<br>");			// T
+
+		result = a <= b && b >= m && m <= n;	// T && F && T
+		document.write(result, "<br>");			// F
+
+		result = a <= b && b <= m && m <= n;	// T && T && T
+		document.write(result, "<br>");			// T
+
+		result = !(a > b);						// !F를 계산
+		document.write(result, "<br>");			// T
+	</script>
 </head>
 <body>
 </body>
