@@ -8,8 +8,18 @@
 			$(function( ) {
 				$(".btn1").click(function(){
 					$(".btn1").parent().next( )
-					.css({"color":})
+					.css({"color":"#f00"});
+				});
+
+				$(".btn2").on({
+					"mouseover focus": function() {
+						$(".btn2").parent().next( )
+						.css({"color":"#0f0"});
+					}
 				})
+
+				$(".btn1").click();
+				$(".btn2").trigger("mouseover");
 			});
 		</script>
 	</head>
